@@ -1,12 +1,124 @@
-# React + Vite
+# 📱 Bitt — Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Bitt** es una red social tipo Twitter con chat en tiempo real.
+Este repositorio contiene el **frontend** de la aplicación, construido con **React + Vite + TailwindCSS**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Stack
 
-## Expanding the ESLint configuration
+* ⚛️ **React + Vite** — SPA rápida y modular
+* 🎨 **TailwindCSS** — estilos modernos y minimalistas
+* 🔗 **Axios / Fetch** — consumo de API REST
+* 🔒 **JWT en cookies HttpOnly** — autenticación segura
+* 💬 **Socket.io Client** — chat en tiempo real (futuro)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 📂 Estructura del proyecto
+
+```
+bitt-frontend/
+ ├── public/               # archivos estáticos
+ ├── src/
+ │   ├── components/        # componentes reutilizables
+ │   ├── pages/             # páginas (Home, Login, Chat, etc.)
+ │   ├── context/           # contextos globales (UserContext)
+ │   ├── hooks/             # hooks personalizados
+ │   ├── App.jsx            # rutas principales
+ │   └── main.jsx           # punto de entrada
+ ├── .env.example           # variables de entorno
+ ├── package.json
+ └── README.md
+```
+
+---
+
+## ⚙️ Instalación
+
+Clona el repositorio e instala dependencias:
+
+```bash
+# Clonar repo
+git clone https://github.com/<tu-usuario>/bitt-frontend.git
+
+# Entrar en carpeta
+cd bitt-frontend
+
+# Instalar dependencias
+npm install
+```
+
+---
+
+## 🔑 Configuración de entorno
+
+Copia el archivo `.env.example` y renómbralo como `.env`:
+
+```bash
+cp .env.example .env
+```
+
+Completa las variables con tu configuración:
+
+```env
+VITE_API_URL=http://localhost:5000/api
+VITE_CLOUDINARY_CLOUD_NAME=<your_cloud_name>
+VITE_CLOUDINARY_UPLOAD_PRESET=<your_upload_preset>
+```
+
+---
+
+## ▶️ Ejecución
+
+Modo desarrollo:
+
+```bash
+npm run dev
+```
+
+Build de producción:
+
+```bash
+npm run build
+```
+
+Preview local del build:
+
+```bash
+npm run preview
+```
+
+---
+
+## 🛠️ Features (MVP)
+
+* [ ] Registro e inicio de sesión con cookies HttpOnly
+* [ ] Crear y ver posts básicos
+* [ ] Likes y comentarios
+* [ ] Seguir/Dejar de seguir usuarios
+* [ ] Chat en tiempo real con Socket.io
+* [ ] Subida de imágenes (Cloudinary)
+* [ ] Moderación de contenido
+
+---
+
+## 📌 Backend
+
+Este frontend se conecta al repositorio:
+👉 [bitt-backend](https://github.com/<tu-usuario>/bitt-backend)
+
+---
+
+## 📝 Notas
+
+* Este repo es solo el **frontend**, la lógica de autenticación y API está en el backend.
+* TailwindCSS ya está configurado para personalizar la paleta de colores.
+* Recuerda que todas las variables de entorno en Vite deben empezar con `VITE_`.
+
+---
+
+## 📄 Licencia
+
+Proyecto creado con fines de aprendizaje y portafolio.
+
