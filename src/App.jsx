@@ -1,9 +1,19 @@
+import { Route,  Routes } from "react-router-dom";
+import { Feed } from "./page/Feed";
+import { Layout } from "./components/Layout";
+import { Login } from "./page/Login";
+import { Saludito } from "./components/Saludito";
+
 export const App = () => {
-  // 🧠 Logic
+  // const user = null; /* probar el loading sin ningun usuario */
+  const user = true;
 
   return (
-    <>
-      <h1 class="text-3xl font-bold underline text-blue-200 bg-amber-600">Hello world!</h1>
-    </>
+    <Routes>
+      <Route path="/" element={!user ? <Login /> : <Layout />}>
+        <Route index element={<Feed />} />
+        <Route path="/saludo" element={<Saludito />} />
+      </Route>
+    </Routes>
   );
 };
