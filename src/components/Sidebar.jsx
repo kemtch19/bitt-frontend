@@ -19,7 +19,7 @@ export const Sidebar = () => {
   ];
 
   return (
-    <div className="flex flex-col justify-between p-3">
+    <div className="flex flex-col justify-between p-3 w-sm">
       <div>
         <img className="" src={logo1} />
         {rutas.map((r) => (
