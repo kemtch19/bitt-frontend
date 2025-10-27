@@ -1,4 +1,4 @@
-import {convertNumber} from "../../utils/convertNumbers.js"
+import { convertNumber } from "../../utils/convertNumbers.js";
 
 export const Trends = () => {
   const tendenciesData = [
@@ -14,12 +14,24 @@ export const Trends = () => {
       name: "NuevasTecnologías",
       number: 9845,
     },
+    {
+      name: "Xtrend8",
+      number: 6386,
+    },
+    {
+      name: "Xtrend5",
+      number: 6690,
+    },
+    {
+      name: "Xtrend123",
+      number: 2782,
+    },
   ];
 
   return (
     <div className="my-7">
       <h1>Tendencias para ti</h1>
-      {tendenciesData.map((d, index) => (
+      {tendenciesData.slice(0, 3).map((d, index) => (
         <div className="my-3">
           <p className="text-xs">{index + 1} · Tendencia</p>
           <h3>#{d.name}</h3>

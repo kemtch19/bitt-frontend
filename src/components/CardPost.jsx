@@ -61,9 +61,9 @@ export const CardPost = () => {
 
   return (
     <>
-      {data.map((d) => (
+      {data.map((d,index)  => (
         <div
-          key={d.name}
+          key={index}
           className="p-3 flex gap-3 border-t py-5 border-gray-500 bg-white"
         >
           <img
