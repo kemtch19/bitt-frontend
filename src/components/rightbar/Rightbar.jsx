@@ -7,8 +7,8 @@ export const Rightbar = () => {
 
   return (
     <>
-      <div className="flex-col text-black"> 
-        <div className="flex-1">
+      <div className="flex flex-col h-dvh content-between text-black mx-5"> 
+        <div className="flex-1"> 
           <Trends />
         </div>
         <div className="flex-1">

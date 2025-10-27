@@ -1,4 +1,5 @@
-import { HeartIcon,  MessageSquareIcon, RepeatIcon } from "lucide-react";
+import { HeartIcon, MessageSquareIcon, RepeatIcon } from "lucide-react";
+import { convertNumber } from "../utils/convertNumbers.js";
 
 export const CardPost = () => {
   const data = [
@@ -61,23 +62,35 @@ export const CardPost = () => {
   return (
     <>
       {data.map((d) => (
-        <div className="p-3 flex gap-3 border-t py-5 border-gray-500 bg-white">
-          <img className="size-14 rounded-full object-fit" src={d.image} alt="" />
+        <div
+          key={d.name}
+          className="p-3 flex gap-3 border-t py-5 border-gray-500 bg-white"
+        >
+          <img
+            className="size-14 rounded-full object-fit"
+            src={d.image}
+            alt=""
+          />
           <div>
             <div className="flex gap-2 mb-1">
               <h2 className="text-black">{d.name}</h2>
-              <span className="text-black">@{d.username} · {d.time}h ago</span>
+              <span className="text-black">
+                @{d.username} · {d.time}h ago
+              </span>
             </div>
             <p className="text-black mb-4">{d.description}</p>
             <div className="flex gap-8">
               <div className="flex gap-2">
-                <HeartIcon color="black" width={20} /><span className="text-black">{d.likes}</span>
+                <HeartIcon color="black" width={20} />
+                <span className="text-black">{convertNumber(d.likes)}</span>
               </div>
               <div className="flex gap-2">
-                <RepeatIcon color="black" width={20} /><span className="text-black">{d.reposts}</span>
+                <RepeatIcon color="black" width={20} />
+                <span className="text-black">{convertNumber(d.reposts)}</span>
               </div>
               <div className="flex gap-2">
-                <MessageSquareIcon color="black" width={20} /><span className="text-black">{d.chats}</span>
+                <MessageSquareIcon color="black" width={20} />
+                <span className="text-black">{convertNumber(d.chats)}</span>
               </div>
             </div>
           </div>
