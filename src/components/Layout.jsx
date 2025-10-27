@@ -10,7 +10,6 @@ export const Layout = () => {
   return user ? (
     <div className="w-full flex">
       <Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
-
       <div className="flex-1 bg-amber-200">
         <Outlet />
       </div>

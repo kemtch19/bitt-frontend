@@ -6,6 +6,7 @@ import { Saludito } from "./components/Saludito";
 import { Notification } from "./page/Notification";
 import { Profile } from "./page/Profile";
 import { Message } from "./page/Message";
+import { Settings } from "./page/Settings";
 
 export const App = () => {
   // const user = null; /* probar el loading sin ningun usuario */
@@ -19,6 +20,7 @@ export const App = () => {
         <Route path="/notifications" element={<Notification />} />
         <Route path="/messages" element={<Message />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/settings" element={<Settings />} />
       </Route>
     </Routes>
   );
