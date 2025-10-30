@@ -2,7 +2,7 @@ export const Profile = () => {
   // 🧠 Logic
 
   return (
-    <div className="h-screen flex flex-col text-black">
+    <div className="flex flex-col text-black">
       <div class="bg-linear-to-r h-50 from-cyan-500 to-violet-500"></div>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. In, explicabo
