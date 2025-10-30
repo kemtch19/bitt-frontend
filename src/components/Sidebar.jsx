@@ -8,20 +8,20 @@ import {
 } from "lucide-react";
 import logo1 from "../assets/logo-bitt.svg";
 import { Link, NavLink } from "react-router-dom";
+import { DarkTheme } from "./DarkTheme";
 
 export const Sidebar = () => {
   const rutas = [
     { to: "/", label: "Inicio", icon: HomeIcon },
-    { to: "/saludo", label: "Saludame", icon: Smile },
     { to: "/messages", label: "Mensaje", icon: MessageCircleIcon },
     { to: "/notifications", label: "Notificaciones", icon: BellIcon },
     { to: "/profile", label: "Perfil", icon: UserRoundPenIcon },
   ];
 
   return (
-    <div className="flex flex-col justify-between p-3 w-sm">
+    <div className="w-60 border-r border-gray-200 ">
       <div>
-        <img className="" src={logo1} />
+        <img src={logo1} />
         {rutas.map((r) => (
           <NavLink
             className={({ isActive }) =>
@@ -39,6 +39,7 @@ export const Sidebar = () => {
           </NavLink>
         ))}
       </div>
+      <DarkTheme />
       <div className=" flex justify-between items-center">
         <div className="flex gap-2 items-center">
           <img

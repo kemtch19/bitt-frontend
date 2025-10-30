@@ -15,8 +15,8 @@ export const Feed = () => {
   };
 
   return (
-    <div className="bg-[#efeff0] h-screen p-3 flex">
-      <div className="flex-3">
+    <div className="bg-[#efeff0] h-screen flex">
+      {/* <div className="flex-3">
         <h1 className="text-black text-3xl py-2">Inicio</h1>
         <div className="p-3 flex gap-3 bg-white">
           <img className="h-fit" src="/vite.svg" alt="" />
@@ -49,7 +49,7 @@ export const Feed = () => {
       </div>
       <div className="flex-1">
         <Rightbar />
-      </div>
+      </div> */}
     </div>
   );
 };

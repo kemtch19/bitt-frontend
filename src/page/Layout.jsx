@@ -1,6 +1,6 @@
-import { Loading } from "./Loading";
+import { Loading } from "../components/Loading";
 import { useState } from "react";
-import { Sidebar } from "./Sidebar";
+import { Sidebar } from "../components/Sidebar";
 import { Outlet } from "react-router-dom";
 
 export const Layout = () => {
@@ -8,9 +8,9 @@ export const Layout = () => {
   const [sidebarOpen, setSidebarOpen] = useState(true);
 
   return user ? (
-    <div className="flex w-full">
-        <Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
-      <div className="bg-amber-200">
+    <div className="flex w-full h-screen">
+      <Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
+      <div>
         <Outlet />
       </div>
     </div>
