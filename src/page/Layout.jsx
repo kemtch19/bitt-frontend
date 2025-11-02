@@ -11,7 +11,7 @@ export const Layout = () => {
   return user ? (
     <div className="flex w-full h-screen">
       <Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
-      <div className="flex-1">
+      <div className="flex-1 bg-[#efeff0]">
         <Outlet />
       </div>
 
@@ -22,7 +22,10 @@ export const Layout = () => {
           onClick={() => setSidebarOpen(false)}
         />
       ) : (
-        <MenuIcon className="absolute top-3 right-3 z-100 bg-white rounded-md size-10 text-gray-600 sm:hidden" onClick={()=>setSidebarOpen(true)} />
+        <MenuIcon
+          className="absolute top-3 right-3 z-100 bg-white rounded-md size-10 text-gray-600 sm:hidden"
+          onClick={() => setSidebarOpen(true)}
+        />
       )}
     </div>
   ) : (
