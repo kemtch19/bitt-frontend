@@ -1,5 +1,12 @@
-import { HeartIcon, MessageSquareIcon, RepeatIcon } from "lucide-react";
+import {
+  HeartIcon,
+  MessageSquareIcon,
+  RepeatIcon,
+  Verified,
+  VerifiedIcon,
+} from "lucide-react";
 import { convertNumber } from "../utils/convertNumbers.js";
+import girl from "../assets/fakePeople/girl.jpg";
 
 export const CardPost = () => {
   const data = [
@@ -61,35 +68,31 @@ export const CardPost = () => {
 
   return (
     <>
-      {data.map((d,index)  => (
-        <div
-          key={index}
-          className="p-3 flex gap-3 border-t py-5 border-gray-500 bg-white"
-        >
-          <img
-            className="size-14 rounded-full object-fit"
-            src={d.image}
-            alt=""
-          />
-          <div>
+      {data.map((d, index) => (
+        <div key={index} className="w-full flex gap-3 p-2 mt-2">
+          <div className="flex-1">
+            <img className="size-20 rounded-full object-cover" src={girl} />
+          </div>
+          <div className="flex-6">
             <div className="flex gap-2 mb-1">
-              <h2 className="text-black">{d.name}</h2>
-              <span className="text-black">
+              <h2 className="font-bold">{d.name}</h2>
+              <VerifiedIcon className="text-blue-400 -ml-1.5 mt-0.5 size-5" />
+              <span className="text-gray-500 text-sm flex items-center">
                 @{d.username} · {d.time}h ago
               </span>
             </div>
-            <p className="text-black mb-4">{d.description}</p>
+            <p className="text-black mb-1">{d.description}</p>
             <div className="flex gap-8">
-              <div className="flex gap-2">
-                <HeartIcon color="black" width={20} />
+              <div className="flex gap-1">
+                <HeartIcon color="black" width={15} />
                 <span className="text-black">{convertNumber(d.likes)}</span>
               </div>
-              <div className="flex gap-2">
-                <RepeatIcon color="black" width={20} />
+              <div className="flex gap-1">
+                <RepeatIcon color="black" width={15} />
                 <span className="text-black">{convertNumber(d.reposts)}</span>
               </div>
-              <div className="flex gap-2">
-                <MessageSquareIcon color="black" width={20} />
+              <div className="flex gap-1">
+                <MessageSquareIcon color="black" width={15} />
                 <span className="text-black">{convertNumber(d.chats)}</span>
               </div>
             </div>

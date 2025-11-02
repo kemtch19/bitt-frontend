@@ -1,7 +1,5 @@
 import {
-  Calendar1Icon,
   CalendarIcon,
-  MapIcon,
   MapPinIcon,
   Verified,
 } from "lucide-react";
@@ -28,7 +26,7 @@ export const Profile = () => {
               </div>
               <p className="text-gray-500 text-sm -mt-1">@delfi12</p>
               <p className="text-sm mt-2 mb-5">
-                creador | Exploradora | Apasionada por aprender | Lorem ipsum
+                Creadora | Exploradora | Apasionada por aprender | Lorem ipsum
                 dolor sit amet Lorem, ipsum..
               </p>
               <div className="flex text-sm mt-2 text-gray-500 gap-2 items-center">
