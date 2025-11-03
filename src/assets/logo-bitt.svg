@@ -1,0 +1,18 @@
+<!--?xml version="1.0" encoding="UTF-8"?-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 48" role="img" aria-labelledby="titleDesc">
+  <title id="titleDesc">Logo Bitt</title>
+
+  <!-- Fondo opcional (puedes quitarlo si lo quieres transparente) -->
+  <!-- <rect width="180" height="48" rx="8" fill="#ffffff"/> -->
+
+  <!-- Ícono: burbuja de chat -->
+  <path d="M12 6h28a8 8 0 0 1 8 8v18a8 8 0 0 1-8 8H24l-8 8v-8h-4a8 8 0 0 1-8-8V14a8 8 0 0 1 8-8z" fill="#1DA1F2"></path>
+
+  <!-- Letra B en negativo dentro de la burbuja -->
+  <path d="M20 16h10a6 6 0 0 1 0 12h-10zM20 28h10a5 5 0 0 1 0 10h-10z" fill="#ffffff"></path>
+
+  <!-- Texto al lado -->
+  <text x="60" y="32" font-family="Inter, sans-serif" font-size="26" font-weight="600" fill="#15202B">
+    Bitt
+  </text>
+</svg>
