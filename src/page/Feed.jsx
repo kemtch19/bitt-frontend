@@ -5,7 +5,7 @@ import { Rightbar } from "../components/rightbar/Rightbar.jsx";
 
 export const Feed = () => {
   return (
-    <div className="h-full p-5 flex">
+    <div className="p-5 flex no-scrollbar">
       <div className="flex bg-white rounded-2xl flex-col">
         <div className="flex p-3 justify-center">
           <div className="border-2 border-gray-100 rounded-2xl p-2">
