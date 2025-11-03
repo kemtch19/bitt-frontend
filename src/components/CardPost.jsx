@@ -84,15 +84,15 @@ export const CardPost = () => {
             <p className="text-black mb-1">{d.description}</p>
             <div className="flex gap-8">
               <div className="flex gap-1">
-                <HeartIcon color="black" width={15} />
+                <HeartIcon color="black" width={13} />
                 <span className="text-black">{convertNumber(d.likes)}</span>
               </div>
               <div className="flex gap-1">
-                <RepeatIcon color="black" width={15} />
+                <RepeatIcon color="black" width={13} />
                 <span className="text-black">{convertNumber(d.reposts)}</span>
               </div>
               <div className="flex gap-1">
-                <MessageSquareIcon color="black" width={15} />
+                <MessageSquareIcon color="black" width={13} />
                 <span className="text-black">{convertNumber(d.chats)}</span>
               </div>
             </div>

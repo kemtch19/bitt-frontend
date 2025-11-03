@@ -31,9 +31,9 @@ export const Profile = () => {
               </p>
               <div className="flex text-sm mt-2 text-gray-500 gap-2 items-center">
                 <MapPinIcon className="size-4" />
-                <p className="mr-5">Florida, EU</p>
+                <p className="mr-5 text-xs">Florida, EU</p>
                 <CalendarIcon className="size-4" />
-                <p>Se unió hace 15 días</p>
+                <p className=" text-xs">Se unió hace 15 días</p>
               </div>
               <hr className="text-gray-300 my-3" />
               <div className="flex gap-1 items-center">

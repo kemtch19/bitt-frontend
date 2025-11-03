@@ -11,7 +11,7 @@ export const Layout = () => {
   return user ? (
     <div className="flex w-full h-screen">
       <Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
-      <div className="flex-1 bg-[#efeff0]">
+      <div className=" bg-[#efeff0] overflow-y-auto">
         <Outlet />
       </div>
 
