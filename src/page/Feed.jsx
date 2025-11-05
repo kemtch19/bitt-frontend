@@ -1,7 +1,6 @@
 import { ClipboardListIcon, ImagePlusIcon, SmilePlusIcon } from "lucide-react";
 import { CardPost } from "../components/CardPost";
 import girl from "../assets/fakePeople/girl.jpg";
-import { Rightbar } from "../components/rightbar/Rightbar.jsx";
 
 export const Feed = () => {
   return (
@@ -41,9 +40,6 @@ export const Feed = () => {
         </div>
         <CardPost />
       </div>
-      {/* <div className="flex-1">
-        <Rightbar />
-      </div> */}
     </div>
   );
 };
