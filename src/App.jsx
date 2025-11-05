@@ -6,6 +6,7 @@ import { Notification } from "./page/Notification";
 import { Profile } from "./page/Profile";
 import { Message } from "./page/Message";
 import { Settings } from "./page/Settings";
+import { ChatBox } from "./page/ChatBox";
 
 export const App = () => {
   const user = true;
@@ -18,6 +19,7 @@ export const App = () => {
         <Route path="/messages" element={<Message />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/settings" element={<Settings />} />
+        <Route path="/messages/:userId" element={<ChatBox />} />
       </Route>
     </Routes>
   );
