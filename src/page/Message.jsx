@@ -4,14 +4,14 @@ import { Link } from "react-router-dom";
 export const Message = () => {
 
   return (
-    <div className="flex flex-col bg-white rounded-2xl m-3 p-3  h-full overflow-y-hidden no-scrollbar ">
-      <h1 className="text-3xl font-bold">Message</h1>
+    <div className="flex flex-col bg-white rounded-2xl m-2 p-2  h-full overflow-y-hidden no-scrollbar ">
+      <h1 className="text-3xl font-bold">Mensajes</h1>
       <p className="text-sm text-gray-500">
         Habla con tus amigos y familiares enviando un bit.
       </p>
       <Link
         to={"/messages/12345"}
-        className="hero shadow-2xl rounded-md mt-2 bg-white hover:bg-gray-100 "
+        className="hero shadow-[0_0_10px_rgba(0,0,0,0.25)] rounded-md mt-2 bg-white hover:bg-gray-100 "
       >
         <div className="hero-content flex items-center gap-2 lg:flex-row-reverse">
           <img
