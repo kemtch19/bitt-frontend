@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export const Message = () => {
 
   return (
-    <div className="flex flex-col bg-white rounded-2xl m-2 p-2  h-full overflow-y-hidden no-scrollbar ">
+    <div className="flex flex-col dark:bg-gray-700 bg-white rounded-2xl m-2 p-2  h-full overflow-y-hidden no-scrollbar ">
       <h1 className="text-3xl font-bold">Mensajes</h1>
       <p className="text-sm text-gray-500">
         Habla con tus amigos y familiares enviando un bit.

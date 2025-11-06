@@ -63,7 +63,7 @@ export const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
             <p className="text-xs text-gray-500 -mt-1">@johndoe</p>
           </div>
         </div>
-        <Link to={"/settings"}>
+        <Link to={"/settings"} onClick={() => setSidebarOpen(false)}>
           <SettingsIcon className="size-5" />
         </Link>
       </div>

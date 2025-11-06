@@ -9,7 +9,7 @@ import { Settings } from "./page/Settings";
 import { ChatBox } from "./page/ChatBox";
 
 export const App = () => {
-  const user = false;
+  const user = true;
 
   return (
     <Routes>
