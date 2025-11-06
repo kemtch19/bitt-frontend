@@ -1,11 +1,10 @@
 import { ClipboardListIcon, ImagePlusIcon, SmilePlusIcon } from "lucide-react";
 import { CardPost } from "../components/CardPost";
 import girl from "../assets/fakePeople/girl.jpg";
-import { Rightbar } from "../components/rightbar/Rightbar.jsx";
 
 export const Feed = () => {
   return (
-    <div className="p-5 flex no-scrollbar">
+    <div className="p-2 flex no-scrollbar">
       <div className="flex bg-white rounded-2xl flex-col">
         <div className="flex p-3 justify-center">
           <div className="border-2 border-gray-100 rounded-2xl p-2">
@@ -41,9 +40,6 @@ export const Feed = () => {
         </div>
         <CardPost />
       </div>
-      {/* <div className="flex-1">
-        <Rightbar />
-      </div> */}
     </div>
   );
 };

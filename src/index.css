@@ -1,15 +1,35 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 @import "tailwindcss";
 @plugin "daisyui";
+@plugin "tailwind-scrollbar";
 
-*{
+* {
   font-family: "Inter", sans-serif;
 }
 
-textarea{
+textarea {
   resize: none;
 }
 
-.no-scrollbar::-webkit-scrollbar {
+/* Puedes añadir esto en tu CSS global */
+::-webkit-scrollbar {
   display: none;
+}
+
+@theme {
+  --spacing-icon: 20px;
+  --spacing-input-icon: 16px;
+  --color-input-error: oklch(71% 0.194 13.428);
+}
+
+[data-theme="dark"] {
+  /* --bg-primary: linear-gradient(to bottom right, #2a2b2a, #1a1d1b); */
+  --bg-primary: linear-gradient(to bottom, #2C5364, #203A43, #0F2027);
+  --text-primary: #ffffff;
+}
+
+[data-theme="light"] {
+  /* --bg-primary: linear-gradient(to bottom right, #ecedec, #cdd0cf); */
+  --bg-primary: linear-gradient(to bottom, #c4cdd7, #DCE1E7, #eef2f3);
+  --text-primary: #000000;
 }
