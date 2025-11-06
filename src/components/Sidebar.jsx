@@ -21,7 +21,7 @@ export const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
   return (
     <div
       className={`w-45 border-r border-gray-200 flex flex-col justify-between items-center max-sm:absolute top-0 bottom-0 z-20 bg-base-100 ${
-        sidebarOpen ? "translate-x-0 " : "max-sm:-translate-x-full "
+        sidebarOpen ? "translate-x-0" : "max-sm:-translate-x-full"
       } transition-all duration-500 ease-in-out`}
     >
       <div className="w-full">
