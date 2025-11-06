@@ -10,7 +10,7 @@ export const Message = () => {
       </p>
       <Link
         to={"/messages/12345"}
-        className="hero shadow-[0_0_10px_rgba(0,0,0,0.25)]  rounded-md mt-2 bg-base-100 hover:bg-gray-100 dark:hover:bg-gray-800 dark:shadow-[0_0_10px_rgba(0,0,0,0.7)]"
+        className="hero shadow-[0_0_10px_rgba(0,0,0,0.25)] rounded-md mt-2 bg-base-100 hover:bg-gray-100 dark:hover:bg-gray-800 dark:shadow-[0_0_10px_rgba(0,0,0,0.7)]"
       >
         <div className="hero-content flex items-center gap-2 lg:flex-row-reverse">
           <img
