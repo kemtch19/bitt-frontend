@@ -6,7 +6,7 @@ export const Notification = () => {
   return (
     <div className="w-screen h-screen">
       <div className="bg-white m-2 p-2 rounded-2xl">
-        <h1 className="text-3xl font-bold ">Notificaciones</h1>
+        <h1 className="text-3xl font-bold">Notificaciones</h1>
         <p className="text-sm text-gray-500">
           Estas son tus ultimas notificaciones bitter.
         </p>
