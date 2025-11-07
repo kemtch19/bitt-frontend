@@ -69,10 +69,11 @@ export const CardPost = () => {
   return (
     <>
       {data.map((d, index) => (
-        <div key={index} className="w-full flex gap-3 p-2 mt-2">
-          <div className="flex-1">
-            <img className="size-20 rounded-full object-cover" src={girl} />
-          </div>
+        <div
+          key={index}
+          className="w-full flex gap-3 p-2 mt-2 border-b-[0.5px] border-gray-500"
+        >
+          <img className="w-12 h-12 rounded-full object-cover" src={girl} />
           <div className="flex-6">
             <div className="flex gap-2 mb-1">
               <h2 className="font-bold">{d.name}</h2>
@@ -81,19 +82,28 @@ export const CardPost = () => {
                 @{d.username} · {d.time}h ago
               </span>
             </div>
-            <p className="text-black mb-1">{d.description}</p>
+            <p className="text-black dark:text-white mb-1">{d.description}</p>
             <div className="flex gap-8">
-              <div className="flex gap-1">
-                <HeartIcon color="black" width={13} />
-                <span className="text-black">{convertNumber(d.likes)}</span>
+              <div className="flex gap-1 items-center">
+                <HeartIcon className="dark:text-white text-black" width={13} />
+                <span className="text-black dark:text-white text-sm">
+                  {convertNumber(d.likes)}
+                </span>
               </div>
-              <div className="flex gap-1">
-                <RepeatIcon color="black" width={13} />
-                <span className="text-black">{convertNumber(d.reposts)}</span>
+              <div className="flex gap-1 items-center">
+                <RepeatIcon className="dark:text-white text-black" width={13} />
+                <span className="text-black dark:text-white text-sm">
+                  {convertNumber(d.reposts)}
+                </span>
               </div>
-              <div className="flex gap-1">
-                <MessageSquareIcon color="black" width={13} />
-                <span className="text-black">{convertNumber(d.chats)}</span>
+              <div className="flex gap-1 items-center">
+                <MessageSquareIcon
+                  className="dark:text-white text-black"
+                  width={13}
+                />
+                <span className="text-black dark:text-white text-sm">
+                  {convertNumber(d.chats)}
+                </span>
               </div>
             </div>
           </div>

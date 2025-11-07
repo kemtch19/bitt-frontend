@@ -5,31 +5,31 @@ export const Notification = () => {
 
   return (
     <div className="w-screen h-screen">
-      <div className="bg-white m-2 p-2 rounded-2xl">
-        <h1 className="text-3xl font-bold ">Notificaciones</h1>
+      <div className="bg-base-100 m-2 p-2 rounded-2xl">
+        <h1 className="text-3xl font-bold">Notificaciones</h1>
         <p className="text-sm text-gray-500">
           Estas son tus ultimas notificaciones bitter.
         </p>
 
         {/* botones */}
-        <div className="my-4 flex gap-2">
-          <button className="cursor-pointer focus:bg-blue-500 focus:text-white bg-gray-200 rounded-sm px-2">
+        <div className="my-4 flex gap-1">
+          <button className="cursor-pointer dark:bg-gray-700  focus:bg-blue-500 focus:text-white bg-gray-200 rounded-sm px-2">
             Todos
           </button>
-          <button className="cursor-pointer focus:bg-blue-500 focus:text-white bg-gray-200 rounded-sm px-2">
+          <button className="cursor-pointer dark:bg-gray-700  focus:bg-blue-500 focus:text-white bg-gray-200 rounded-sm px-2">
             Menciones
           </button>
-          <button className="cursor-pointer focus:bg-blue-500 focus:text-white bg-gray-200 rounded-sm px-2">
+          <button className="cursor-pointer dark:bg-gray-700  focus:bg-blue-500 focus:text-white bg-gray-200 rounded-sm px-2">
             Likes
           </button>
-          <button className="cursor-pointer focus:bg-blue-500 focus:text-white bg-gray-200 rounded-sm px-2">
+          <button className="cursor-pointer dark:bg-gray-700  focus:bg-blue-500 focus:text-white bg-gray-200 rounded-sm px-2">
             Comentarios
           </button>
         </div>
 
         {/* cards */}
         <div className="flex flex-col gap-2">
-          <div className="flex items-center gap-2 shadow-[0_0_10px_rgba(0,0,0,0.25)] rounded-2xl p-2">
+          <div className="flex items-center gap-2 shadow-[0_0_10px_rgba(0,0,0,0.25)] rounded-2xl p-2 dark:hover:bg-gray-800 dark:shadow-[0_0_10px_rgba(0,0,0,0.7)] cursor-pointer">
             <img src={girl} className="rounded-full size-14 object-cover" />
             <div className="text-sm">
               <p>
@@ -42,7 +42,7 @@ export const Notification = () => {
             </div>
             <p className="text-sm text-gray-400 ml-auto">hace 5 m</p>
           </div>
-          <div className="flex items-center gap-2 shadow-[0_0_10px_rgba(0,0,0,0.25)] rounded-2xl p-2">
+          <div className="flex items-center gap-2 shadow-[0_0_10px_rgba(0,0,0,0.25)] rounded-2xl p-2 dark:hover:bg-gray-800 dark:shadow-[0_0_10px_rgba(0,0,0,0.7)] cursor-pointer">
             <img src={girl} className="rounded-full size-14 object-cover" />
             <div className="text-sm">
               <p>
@@ -55,7 +55,7 @@ export const Notification = () => {
             </div>
             <p className="text-sm text-gray-400 ml-auto">hace 1 h</p>
           </div>
-          <div className="flex items-center gap-2 shadow-[0_0_10px_rgba(0,0,0,0.25)] rounded-2xl p-2">
+          <div className="flex items-center gap-2 shadow-[0_0_10px_rgba(0,0,0,0.25)] rounded-2xl p-2 dark:hover:bg-gray-800 dark:shadow-[0_0_10px_rgba(0,0,0,0.7)] cursor-pointer">
             <img src={girl} className="rounded-full size-14 object-cover" />
             <div className="text-sm">
               <p>
@@ -68,7 +68,7 @@ export const Notification = () => {
             </div>
             <p className="text-sm text-gray-400 ml-auto">hace 5 m</p>
           </div>
-          <div className="flex items-center gap-2 shadow-[0_0_10px_rgba(0,0,0,0.25)] rounded-2xl p-2">
+          <div className="flex items-center gap-2 shadow-[0_0_10px_rgba(0,0,0,0.25)] rounded-2xl p-2 dark:hover:bg-gray-800 dark:shadow-[0_0_10px_rgba(0,0,0,0.7)] cursor-pointer">
             <img src={girl} className="rounded-full size-14 object-cover" />
             <div className="text-sm">
               <p>
