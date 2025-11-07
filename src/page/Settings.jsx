@@ -41,7 +41,7 @@ export const Settings = () => {
             </div>
           </div>
           <h2 className="font-bold text-[20px] mt-6 text-center">Información del Perfil</h2>
-          <div className="flex gap-4 mt-2 ">
+          <div className="gap-4 mt-2 ">
             <div className="flex flex-col flex-1">
               <label htmlFor="name" className="text-gray-400">
                 Nombre
@@ -53,7 +53,7 @@ export const Settings = () => {
                 className="rounded p-1 border border-gray-300 focus:outline-gray-500 focus:outline-1"
               />
             </div>
-            <div className="flex flex-col flex-1">
+            <div className="flex flex-col flex-1 mt-2">
               <label htmlFor="username" className="text-gray-400">
                 Usuario
               </label>
@@ -74,7 +74,7 @@ export const Settings = () => {
               className="rounded p-1 border border-gray-300 focus:outline-gray-500 focus:outline-1"
             />
           </div>
-          <div className="flex gap-4 mt-4">
+          <div className="mt-4">
             <div className="flex flex-col flex-1">
               <label htmlFor="name" className="text-gray-400">
                 Ubicación
@@ -86,7 +86,7 @@ export const Settings = () => {
                 className="rounded p-1 border border-gray-300 focus:outline-gray-500 focus:outline-1"
               />
             </div>
-            <div className="flex flex-col flex-1">
+            <div className="flex flex-col flex-1 mt-2">
               <label htmlFor="username" className="text-gray-400">
                 Sitio Web
               </label>

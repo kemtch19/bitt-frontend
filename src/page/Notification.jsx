@@ -12,7 +12,7 @@ export const Notification = () => {
         </p>
 
         {/* botones */}
-        <div className="my-4 flex gap-2">
+        <div className="my-4 flex gap-1">
           <button className="cursor-pointer dark:bg-gray-700  focus:bg-blue-500 focus:text-white bg-gray-200 rounded-sm px-2">
             Todos
           </button>

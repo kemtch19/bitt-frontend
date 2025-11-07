@@ -73,9 +73,7 @@ export const CardPost = () => {
           key={index}
           className="w-full flex gap-3 p-2 mt-2 border-b-[0.5px] border-gray-500"
         >
-          <div className="flex-1">
-            <img className="size-20 rounded-full object-cover" src={girl} />
-          </div>
+          <img className="w-12 h-12 rounded-full object-cover" src={girl} />
           <div className="flex-6">
             <div className="flex gap-2 mb-1">
               <h2 className="font-bold">{d.name}</h2>
