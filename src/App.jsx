@@ -11,7 +11,7 @@ import { Register } from "./page/Register";
 import { ProtectedRouted } from "./components/ProtectedRouted";
 
 export const App = () => {
-  const user = false;
+  const user = true;
 
   return (
     <Routes>
