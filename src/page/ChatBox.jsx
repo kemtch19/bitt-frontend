@@ -32,7 +32,7 @@ export const ChatBox = () => {
             Obi-Wan Kenobi
             <time className="text-xs opacity-50">12:45</time>
           </div>
-          <div className="chat-bubble dark:bg-gray-600 shadow bg-gray-200 dark:bg-gray-600">
+          <div className="chat-bubble shadow bg-gray-200 dark:bg-gray-600">
             You were the Chosen One!
           </div>
           <div className="chat-footer opacity-50">Delivered</div>

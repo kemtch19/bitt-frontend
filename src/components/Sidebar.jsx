@@ -1,3 +1,4 @@
+// import girl from "../assets/fakePeople/girl.jpg";
 import {
   BellIcon,
   HomeIcon,
@@ -8,7 +9,8 @@ import {
 import logo1 from "../assets/logo-bitt.svg";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { DarkTheme } from "./DarkTheme";
-import girl from "../assets/fakePeople/girl.jpg";
+import { useContext } from "react";
+import { UserContext } from "../context/User/UserContext";
 
 export const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
   const navigate = useNavigate();
@@ -18,6 +20,8 @@ export const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
     { to: "/notifications", label: "Notificaciones", icon: BellIcon },
     { to: "/profile", label: "Perfil", icon: UserRoundPenIcon },
   ];
+
+  const { user } = useContext(UserContext);
 
   return (
     <div
@@ -55,13 +59,12 @@ export const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
       <DarkTheme />
       <div className="flex justify-between items-center w-full border-t-2 p-2 border-gray-200">
         <div className="flex gap-2 items-center">
-          <img
-            className="rounded-full size-10 object-cover"
-            src={girl}
-          />
+          <img className="rounded-full size-10 object-cover" src={user.avatar} />
           <div className="flex flex-col">
-            <h3 className="font-bold text-[15px] dark:text-amber-300">John Doe</h3>
-            <p className="text-xs text-gray-500 -mt-1">@johndoe</p>
+            <h3 className="font-bold text-[15px] dark:text-amber-300">
+              {user.name}
+            </h3>
+            <p className="text-xs text-gray-500 -mt-1">@{user.user}</p>
           </div>
         </div>
         <Link to={"/settings"} onClick={() => setSidebarOpen(false)}>
