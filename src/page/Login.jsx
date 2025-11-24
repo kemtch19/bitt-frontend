@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { KeyRoundIcon, LockKeyhole, MailIcon, UserIcon } from "lucide-react";
+import { KeyRoundIcon, UserIcon } from "lucide-react";
 
 export const Login = () => {
   // 🧠 Logic
@@ -33,7 +33,7 @@ export const Login = () => {
             />
           </div>
           <u className="text-xs text-blue-500">¿Olvidaste tu contraseña?</u>
-          <button className="mt-6 text-center btn btn-info w-full">
+          <button className="mt-6 text-center btn btn-info w-full" >
             Iniciar Sesión
           </button>
           <p className="text-xs mt-6 text-center text-gray-400">

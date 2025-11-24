@@ -1,8 +1,10 @@
-const PREFIX_LOCAL = "http://localhost:1111/users/id";
+const PREFIX_LOCAL = "http://localhost:1111/users";
 
 export const getUserById = async (id) => {
   try {
     const response = await fetch(`${PREFIX_LOCAL}/${id}`);
+
+    console.log(response);
 
     if (!response.ok) throw new Error("Error al obtener este usuario");
 
