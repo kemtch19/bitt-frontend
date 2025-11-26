@@ -8,10 +8,13 @@ import { Message } from "./page/Message";
 import { Settings } from "./page/Settings";
 import { ChatBox } from "./page/ChatBox";
 import { Register } from "./page/Register";
-import { ProtectedRouted } from "./components/ProtectedRouted";
+import { ProtectedRouted } from "./components/ProtectedRouted.jsx";
+import { useAuthContext } from "./context/Auth/AuthContext.jsx";
 
 export const App = () => {
-  const user = true;
+  const {user, loading} = useAuthContext()
+
+  if(loading) return <p>Cargando...</p>
 
   return (
     <Routes>
@@ -26,7 +29,7 @@ export const App = () => {
       />
 
       {/* rutas privadas después de que se registren o loguen */}
-      <Route element={<ProtectedRouted user={user} />}>
+      <Route element={<ProtectedRouted />}>
         <Route element={<Layout />}>
           <Route path="/feed" element={<Feed />} />
           <Route path="/notifications" element={<Notification />} />

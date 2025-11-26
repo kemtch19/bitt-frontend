@@ -2,14 +2,14 @@ import { useEffect, useState } from "react";
 import { getUserById } from "../services/user";
 
 export const useUser = (id) => {
-  const [user, setUser] = useState({});
+  const [userProfile, setUserProfile] = useState({});
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchUser = async () => {
       try {
         const data = await getUserById(id);
-        setUser(data);
+        setUserProfile(data);
       } catch (error) {
         console.error("Error: ", error);
       } finally {
@@ -20,5 +20,5 @@ export const useUser = (id) => {
     fetchUser();
   }, [id]);
 
-  return { user, loading, setUser };
+  return { userProfile, loading, setUserProfile };
 };

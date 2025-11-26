@@ -2,7 +2,9 @@ const PREFIX_LOCAL = "http://localhost:1111/users";
 
 export const getUserById = async (id) => {
   try {
-    const response = await fetch(`${PREFIX_LOCAL}/${id}`);
+    const response = await fetch(`${PREFIX_LOCAL}/${id}`,{
+      credentials:"include"
+    });
 
     console.log(response);
 

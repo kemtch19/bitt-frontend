@@ -1,10 +1,17 @@
 import { ImageIcon, ImagePlusIcon } from "lucide-react";
 import { useState } from "react";
+import { useUser } from "../hooks/useUser";
+import { useAuthContext } from "../context/Auth/AuthContext";
+import { Loading } from "../components/Loading";
 
 export const Settings = () => {
-  const [image, setImage] = useState(null);
+  // const [image, setImage] = useState(null);
+  const { user } = useAuthContext();
+  const { userProfile, setUserProfile } = useUser(user.id);
 
-  return (
+  console.log("settings: " + userProfile.name);
+
+  return userProfile ? (
     <div className="w-screen h-screen">
       <div className="bg-base-100 m-2 p-2 rounded-2xl ">
         <h1 className="text-3xl font-bold">Settings</h1>
@@ -16,10 +23,10 @@ export const Settings = () => {
             <h2 className="font-bold text-[20px]">Foto de Perfil</h2>
             <div className="flex gap-3 mt-2">
               <label htmlFor="image">
-                {image ? (
+                {userProfile.avatar ? (
                   <div className="relative group w-fit mx-auto">
                     <img
-                      src={URL.createObjectURL(image)}
+                      src={userProfile.avatar}
                       className="size-20 rounded-full shadow-2xl object-cover"
                     />
                     <div className="inset-0 absolute flex justify-center items-center bg-black/30 rounded-full opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer">
@@ -40,7 +47,9 @@ export const Settings = () => {
               </label>
             </div>
           </div>
-          <h2 className="font-bold text-[20px] mt-6 text-center">Información del Perfil</h2>
+          <h2 className="font-bold text-[20px] mt-6 text-center">
+            Información del Perfil
+          </h2>
           <div className="gap-4 mt-2 ">
             <div className="flex flex-col flex-1">
               <label htmlFor="name" className="text-gray-400">
@@ -101,5 +110,7 @@ export const Settings = () => {
         </div>
       </div>
     </div>
+  ) : (
+    <Loading />
   );
 };

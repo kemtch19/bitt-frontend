@@ -1,4 +1,3 @@
-// import girl from "../assets/fakePeople/girl.jpg";
 import {
   BellIcon,
   HomeIcon,
@@ -9,8 +8,8 @@ import {
 import logo1 from "../assets/logo-bitt.svg";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { DarkTheme } from "./DarkTheme";
-import { useContext } from "react";
-import { UserContext } from "../context/User/UserContext";
+import { useAuthContext } from "../context/Auth/AuthContext";
+import { Loading } from "./Loading";
 
 export const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
   const navigate = useNavigate();
@@ -21,9 +20,12 @@ export const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
     { to: "/profile", label: "Perfil", icon: UserRoundPenIcon },
   ];
 
-  const { user } = useContext(UserContext);
+  const { user } = useAuthContext();
+  const localUser = JSON.parse(localStorage.getItem("userProfile"));
 
-  return (
+  const displayUser = localUser;
+
+  return user ? (
     <div
       className={`w-45 border-r border-gray-200 flex flex-col justify-between items-center max-sm:absolute top-0 bottom-0 z-20 bg-base-100 ${
         sidebarOpen ? "translate-x-0" : "max-sm:-translate-x-full"
@@ -59,12 +61,17 @@ export const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
       <DarkTheme />
       <div className="flex justify-between items-center w-full border-t-2 p-2 border-gray-200">
         <div className="flex gap-2 items-center">
-          <img className="rounded-full size-10 object-cover" src={user.avatar} />
+          <img
+            className="rounded-full size-10 object-cover"
+            src={displayUser?.avatar}
+          />
           <div className="flex flex-col">
             <h3 className="font-bold text-[15px] dark:text-amber-300">
-              {user.name}
+              {displayUser?.name}
             </h3>
-            <p className="text-xs text-gray-500 -mt-1">@{user.user}</p>
+            <p className="text-xs text-gray-500 -mt-1">
+              {displayUser?.username}
+            </p>
           </div>
         </div>
         <Link to={"/settings"} onClick={() => setSidebarOpen(false)}>
@@ -72,5 +79,7 @@ export const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
         </Link>
       </div>
     </div>
+  ) : (
+    <Loading />
   );
 };

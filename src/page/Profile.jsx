@@ -1,24 +1,17 @@
-// import girl from "../assets/fakePeople/girl.jpg";
 import { CalendarIcon, MapPinIcon, Verified } from "lucide-react";
-import { useContext } from "react";
-import { UserContext } from "../context/User/UserContext";
+import { useAuthContext } from "../context/Auth/AuthContext";
+// import { getUserById } from "../services/user";
+import { Loading } from "../components/Loading";
+// import { useEffect, useState } from "react";
+import { useUser } from "../hooks/useUser";
+import { convertDateToNumber } from "../utils/convertDateToNumber";
 
 export const Profile = () => {
-  // const [user, setUser] = useState({});
+  const { user } = useAuthContext();
+  const { userProfile } = useUser(user.id);
+  console.log(userProfile);
 
-  // useEffect(() => {
-  //   fetch("http://localhost:1111/users/id/6918c5e5ea4d721abd0d84e4")
-  //     .then((res) => res.json())
-  //     .then((data) => setUser(data))
-  //     .catch((err) => console.error(err));
-  // }, []);
-
-  const {user, loading} = useContext(UserContext)
-
-
-  if(loading) return <p>Cargando</p>
-
-  return (
+  return userProfile ? (
     <div className="relative h-full overflow-y-scroll text-black">
       {/* max-w-3xl -> nos da un tamaño fijo de 768px, pero tiene que estar combinado con mx-auto */}
       <div className="mx-auto max-w-3xl">
@@ -27,31 +20,31 @@ export const Profile = () => {
           <div className="p-3">
             <img
               className="size-40 object-cover rounded-full border-gray-300 border-2 absolute  top-25"
-              src={user.avatar}
+              src={userProfile.avatar}
             />
             <div className="pl-3 pt-20">
               <div className="flex items-center gap-2">
                 <h2 className="text-2xl font-semibold dark:text-white">
-                  {user.name}
+                  {userProfile.name}
                 </h2>
                 <Verified className="text-blue-400 mt-1" />
               </div>
-              <p className="text-gray-500 text-sm -mt-1">@{user.user}</p>
+              <p className="text-gray-500 text-sm -mt-1">{userProfile.user}</p>
               <p className="text-sm mt-2 mb-5 dark:text-white">
-                {user.biography}
+                {userProfile.bio}
               </p>
               <div className="flex text-sm mt-2 text-gray-500 gap-2 items-center border-b-2 border-b-white/70 mb-3 pb-3">
                 <MapPinIcon className="size-4" />
-                <p className="mr-5 text-xs">{user.location}</p>
+                <p className="mr-5 text-xs">{userProfile.location}</p>
                 <CalendarIcon className="size-4" />
-                <p className=" text-xs">Se unió hace 15 días</p>
+                <p className=" text-xs">Se unió hace {convertDateToNumber(userProfile.createdAt)} días</p>
               </div>
               <div className="flex gap-1 items-center">
                 <b className="dark:text-gray-500">6</b>
                 <p className="text-xs mt-1 mr-3 text-gray-500">Posts</p>
-                <b className="dark:text-gray-500">2</b>
+                <b className="dark:text-gray-500">{userProfile.followersCount}</b>
                 <p className="text-xs mt-1 mr-3 text-gray-500">Followers</p>
-                <b className="dark:text-gray-500">3</b>
+                <b className="dark:text-gray-500">{userProfile.followingCount}</b>
                 <p className="text-xs mt-1 mr-3 text-gray-500">Following</p>
               </div>
             </div>
@@ -59,5 +52,7 @@ export const Profile = () => {
         </div>
       </div>
     </div>
+  ) : (
+    <Loading />
   );
 };
